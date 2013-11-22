@@ -1,36 +1,22 @@
-package com.sivasrinivas;
+package code;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class Test {
+
+	/**
+	 * @param args
+	 */
 	
-	
+	private int test = 0;
 	public static void main(String[] args) {
-		
-		System.out.println(Integer.parseInt(new StringBuilder(Integer.toBinaryString(10)).reverse().toString(), 2));
-		
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File("")));
-			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter());
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		int[] a = new int[3];
+		System.out.println(a);
+		Test t = new Test();
+		System.out.println(t.test);
 	}
 	
-	
-}	
+	public void test(){
+		test = 0;
+	}
 
+}
