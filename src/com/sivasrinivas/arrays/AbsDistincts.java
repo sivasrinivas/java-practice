@@ -30,6 +30,7 @@ public class AbsDistincts {
 				j--;
 			}
 			count++;
+			
 		}
 
 		return count;

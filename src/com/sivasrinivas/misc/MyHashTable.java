@@ -56,6 +56,7 @@ public class MyHashTable<K,V> {
 		MyHashTable<Integer, String> table = new MyHashTable<Integer, String>();
 		table.put(2, "2");
 		table.put(12, "4");
+		table.put(12, "6");
 		System.out.println(table.getValue(12));
 	}
 

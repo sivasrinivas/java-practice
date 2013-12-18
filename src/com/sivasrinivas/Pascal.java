@@ -1,4 +1,4 @@
-package code;
+package com.sivasrinivas;
 
 public class Pascal {
 
@@ -16,7 +16,7 @@ public class Pascal {
 		}
 
 		for(int i=0; i<a.length;i++)
-			System.out.println(a[i]);
+			System.out.print(a[i]);
 	}
 
 	public static int index(int i, int j) {

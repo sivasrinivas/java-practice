@@ -13,10 +13,11 @@ public class LevelOrder {
 		root.left = new TreeNode(4);
 		root.right = new TreeNode(8);
 		root.left.right = new TreeNode(5);
-		print(root);
+//		printByLevel(root);
+		levelOrderRecursion(root);
 	}
 	
-	public static void print(TreeNode root){
+	public static void printByLevel(TreeNode root){
 		if(root==null)
 			return;
 		Queue<TreeNode> q = new LinkedList<TreeNode>();
@@ -33,6 +34,30 @@ public class LevelOrder {
 			}
 			System.out.println();
 		}
+	}
+	
+	public static void levelOrderRecursion(TreeNode root){
+		if(root==null)
+			return;
+		Queue<TreeNode> q = new LinkedList<TreeNode>();
+		q.add(root);
+		levelOrderRecursionUtil(q);
+	}
+	
+	public static void levelOrderRecursionUtil(Queue<TreeNode> q){
+		if(q==null || q.size()==0)
+			return;
+		Queue<TreeNode> nextQ = new LinkedList<TreeNode>();
+		while(!q.isEmpty()){
+			TreeNode node = q.poll();
+			System.out.print(node.val+" ");
+			if(node.left!=null)
+				nextQ.add(node.left);
+			if(node.right!=null)
+				nextQ.add(node.right);
+		}
+		System.out.println();
+		levelOrderRecursionUtil(nextQ);
 	}
 
 }

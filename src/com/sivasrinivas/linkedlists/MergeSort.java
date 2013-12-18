@@ -21,7 +21,9 @@ public class MergeSort {
 
 	//Merge subroutine to merge two sorted lists
 	public Node merge(Node a, Node b) {
-	  Node dummyHead, curr; dummyHead = new Node(); curr = dummyHead;
+	  Node dummyHead, curr; 
+	  dummyHead = new Node(); 
+	  curr = dummyHead;
 	  while(a !=null && b!= null) {
 	      if(a.val <= b.val) { 
 	    	  curr.next = a; 
@@ -60,4 +62,42 @@ class Node {
 		this.val=0;
 		next=null;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + val;
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Node other = (Node) obj;
+		if (val != other.val) {
+			return false;
+		}
+		return true;
+	}
+	
+	public String toString(){
+		return new String(Integer.toString(val));
+	}
+	
+	
 }
