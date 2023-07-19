@@ -1,1 +1,30 @@
-apply plugin : 'java'
+plugins {
+    id 'org.springframework.boot' version '2.7.8'
+    id 'java'
+}
+
+version = '1.0.0'
+group = 'org.sivasrinivas'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:2.7.8')
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
+}

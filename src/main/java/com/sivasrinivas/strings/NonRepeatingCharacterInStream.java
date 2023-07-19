@@ -20,7 +20,7 @@ public class NonRepeatingCharacterInStream {
 	public static char nonRepeatingCharacter(String input){
 		if(input==null || input.length()==0)
 			return ' ';
-		Integer minus = new Integer(-1);
+		Integer minus = -1;
 		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 		for(int i=0; i<input.length(); i++){
 			char ch = input.charAt(i);
