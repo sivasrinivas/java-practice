@@ -1,3 +1,4 @@
+package com.sivasrinivas.dynamic;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,13 +10,14 @@ import java.util.Stack;
 /**
  * You are given an array of integers with values greater than or equal to 0, for example: [5, 6, 0, 4, 2, 4, 1, 0, 0, 4]
  * You will develop and implement an algorithm to traverse the array in the shortest number of �hops� starting at index 0
- * Your program will implement the algorithm and write a solution to the standard output stream on a single line identifying the array indices that comprise a solution path, with the indices separated by commas.
+ * Your program will implement the algorithm and write a solution to the standard output stream on a single line identifying
+ * the array indices that comprise a solution path, with the indices separated by commas.
  * For this example, the following would be valid output: 0, 5, 9, out
  *
  * @author Siva
  */
 
-public class Solution {
+public class ShortestJumps {
     /*
      *Reads the input from the given file path and calls calculateJumps method to find calculate solution
      */
